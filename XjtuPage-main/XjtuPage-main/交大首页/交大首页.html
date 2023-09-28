@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>交大首页</title>
+    <style>
+      body{
+        background-color:#8E354A;
+        margin:0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #8E354A;
+        min-width: 2000px;
+      }
+      li{float: left;}
+      li a{
+        display: inline-block;
+        color:white;
+        text-align: center;
+        padding: 20px 20px;
+        text-decoration: none;
+        background-color:#8E354A;
+      }
+      .div1{
+        box-sizing: border-box;
+        padding:0px;
+        width:100%;
+        height:73px;
+        background-color: #8E354A;
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width:100%;
+        min-width: 100px;
+        text-align: center;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 4px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-image: linear-gradient(to right,#E16B8C,#90B44B);font-weight: bold;border-radius:4px;}
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      .tr{
+        transition:transform 0.5s;
+      }
+      .tr:hover{
+        transform:scale(1.4,1.4);
+      }
+      .dropbtn {
+          background-color: #8E354A;
+          color: white;
+          padding: 24px;
+          text-align: center;
+          font-size: 19px;
+          border: none;
+          cursor: pointer;
+          box-sizing: border-box;
+          font-family:"华文楷体"
+      }
+      .search:hover {
+          box-shadow: rgb(0 0 0 / 30%) 0 0 10px;
+          width: 530px;
+      }
+      .search {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: 80%;
+          width: 330px;
+          height: 53px;
+          border-radius: 18px;
+          color:black;
+          background-color: rgba(255, 255, 255, .25);
+          box-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          overflow: hidden;
+          transition: color .25s, background-color .25s, box-shadow .25s, left .25s, opacity .25s, top .25s, width .25s;
+          opacity: 0.6;
+      }
+      input {
+          outline: 0;
+          border: none;
+          width: 100%;
+          height: 100%;
+          padding: 0 20px;
+          color: inherit;
+          background-color: transparent;
+          font-size: 16px;
+          font-family: "Microsoft Yahei Light", "Microsoft Yahei", "PingFang SC", "Helvetica Neue", Helvetica, Tahoma, Arial, sans-serif;
+          text-align: center;
+      }
+      #searchbox {
+          background-color:whitesmoke;
+      }
+      #searchbox:hover {
+          background-color:aquamarine;
+      }
+      .search input::placeholder{
+        font-size: 16px;
+      }
+      *{box-sizing:border-box;outline:none;scrollbar-width:none}html{height:100%}body{max-width:100%;height:100%;margin:0;overflow:hidden;background-color:#333;font-family:system-ui,Arial,Helvetica,sans-serif,"Hiragino Sans GB",PingFangSC-Regular,"Microsoft Yahei Light","Microsoft Yahei","绛夌嚎";cursor:default;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}iframe{width:100%;height:100%;border:none}
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <ul>
+        <li><a href="http://www.xjtu.edu.cn/"><img class="tr" src="素材/交大校徽.png" height="29px"></a></li>
+        <button class="dropbtn"><a href="https://www.bilibili.com" style="text-decoration:none;color:greenyellow">首页</a></button>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://dean.xjtu.edu.cn/" style="text-decoration:none;color:white">教务处</a></button>
+          <div class="dropdown-content">
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz.htm">学业通知</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/zhtz.htm">综合通知</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/jsap.htm">竞赛安排</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/xjgl.htm">学籍管理</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/ksap.htm">考试安排</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/zyfx.htm">专业辅修</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/xjjl.htm">校际交流</a>
+            <a href="http://dean.xjtu.edu.cn/jxxx/xytz/kcap.htm">课程安排</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://ehall.xjtu.edu.cn/new/index.html?browser=no" style="text-decoration:none;color:white">本科教务系统</a></button>
+          <div class="dropdown-content">
+            <a href="http://ehall.xjtu.edu.cn/jwapp/sys/xsfacx/*default/index.do?amp_sec_version_=1&gid_=ZnlIZExqMjlGcnlCamdiMmVjTk9tSGhMbVlJV2xQa3d1cmZTZmg5UWVMS0NtbnFIaFdvVFl1VUZkRlNqeUhpOUo4Y0JlejlJb2VOUGVwMXQ3by9jTEE9PQ&EMAP_LANG=zh&THEME=cherry#/ckgrpyfa">个人方案查询</a>
+            <a href="http://ehall.xjtu.edu.cn/new/thirdAppIndexShell.html">成绩查询</a>
+            <a href="http://ehall.xjtu.edu.cn/portal/html/select_role.html?appId=4768687067472349">我的考试安排</a>
+            <a href="http://ehall.xjtu.edu.cn/jwapp/sys/wdkb/*default/index.do?amp_sec_version_=1&gid_=ZnlIZExqMjlGcnlCamdiMmVjTk9tSGhMbVlJV2xQa3d1cmZTZmg5UWVMS0NtbnFIaFdvVFl1VUZkRlNqeUhpOUo4Y0JlejlJb2VOUGVwMXQ3by9jTEE9PQ&EMAP_LANG=zh&THEME=cherry">我的本研课表</a>
+            <a href="http://ehall.xjtu.edu.cn/portal/html/select_role.html?appId=5856333445645704">网上评教</a>
+            <a href="http://ehall.xjtu.edu.cn/jwapp/sys/bkdsglxjtu/*default/index.do?amp_sec_version_=1&gid_=ZnlIZExqMjlGcnlCamdiMmVjTk9tSGhMbVlJV2xQa3d1cmZTZmg5UWVMS0NtbnFIaFdvVFl1VUZkRlNqeUhpOUo4Y0JlejlJb2VOUGVwMXQ3by9jTEE9PQ&EMAP_LANG=zh&THEME=cherry#/sqds">本科导师管理</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://syxt.xjtu.edu.cn/" style="text-decoration:none;color:white">思源学堂</a></button>
+          <div class="dropdown-content">
+            <a href="http://xkfw.xjtu.edu.cn/xsxkapp/sys/xsxkapp/*default/index.do?ticket=69be8693938b4c4d8212220431338241d2076c466">选课端</a>
+            <a href="http://bkkq.xjtu.edu.cn/attendance-student-pc/#/home?token=eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ1c2VyX2lkIjoiMjIwNDMxMzM4MiIsInN0dWRlbnQiOnsicGFnZVNpemUiOjEwLCJjdXJyZW50IjoxLCJvZmZzZXQiOjAsIm9yZGVyQnlGaWVsZCI6bnVsbCwib3JkZXJCeVR5cGUiOm51bGwsImlkIjo0OTYxNiwiYWNjb3VudCI6IjIyMDQzMTMzODIiLCJzbm8iOiIyMjA0MzEzMzgyIiwiaWROdW1iZXIiOm51bGwsImNhcmRJZCI6IjM4MzE1ODY0ODEiLCJjYXJkQWNjb3VudCI6bnVsbCwiZXhhbU51bWJlciI6ImV4YW1fbnVtYmVyIiwicGFzc3dvcmQiOiI2OTU1RDcyOUQ1M0RBNkYzMTMyQ0NCQjJBMzI2MTYxNSIsIm5hbWUiOiLnvZflh68iLCJzZXgiOjEsImJpcnRoZGF0ZSI6bnVsbCwiY291bnRyeUNvZGUiOm51bGwsIm5hdGlvbkNvZGUiOm51bGwsInBvbGl0aWNzU3RhdHVzQ29kZSI6bnVsbCwiaWRlbnRpdHlDb2RlIjoiMCIsImlkZW50aXR5IjoiMjAiLCJjYW1wdXNDb2RlIjoiMSIsImNhbXB1c05hbWUiOiLlhbTluobmoKHljLoiLCJlbnRlclNjaG9vbERhdGUiOm51bGwsImxlYXZlU2Nob29sRGF0ZSI6bnVsbCwiZ3JhZGUiOjIwMjEsImFjYWRlbXlDb2RlIjpudWxsLCJhY2FkZW15TmFtZSI6bnVsbCwiZGVwYXJ0bWVudENvZGUiOiIxMzQzMDAwMCIsImRlcGFydG1lbnROYW1lIjoi55S15a2Q5LiO5L-h5oGv5a2m6YOoIiwicHJvZmVzc2lvbkNvZGUiOm51bGwsInByb2Zlc3Npb25OYW1lIjpudWxsLCJjbGFzc0NvZGUiOm51bGwsImNsYXNzTmFtZSI6bnVsbCwic2Nob29saW5nTGVuIjpudWxsLCJvcmlnaW4iOm51bGwsInBob25lTnVtYmVyIjpudWxsLCJlbWFpbCI6bnVsbCwicXEiOm51bGwsIndlY2hhdCI6bnVsbCwiZmxhZyI6bnVsbCwicGljdHVyZUlkIjo2NzUxOCwic3RhbmRhcmRDb3VudHJ5QmVhbiI6bnVsbCwic3RhbmRhcmROYXRpb25CZWFuIjpudWxsLCJzdGFuZGFyZFBvbGl0aWNzU3RhdHVzQmVhbiI6bnVsbCwiYmFzZUlkZW50aXR5QmVhbiI6bnVsbCwiYmFzZUNhbXB1c0JlYW4iOm51bGwsImJhc2VEZXBhcnRtZW50QmVhbiI6bnVsbCwiYmFzZVByb2Zlc3Npb25CZWFuIjpudWxsLCJiYXNlQ2xhc3NCZWFuIjpudWxsLCJmaWxlQmVhbiI6bnVsbCwid2hlcmVMaXN0IjpudWxsfSwidXNlcl9uYW1lIjoi572X5YevIiwibmlja19uYW1lIjoi572X5YevIiwiYWNjb3VudCI6IjIyMDQzMTMzODIiLCJleHAiOjE2NjYzNzg4MDAsIm5iZiI6MTY2NjMzMTIzN30.OBc8-90YdkTA7jj4YEYJxzJ3_15icRi46jTDSLG9tTU&uuid=4c8be7bd-efb4-4273-9024-7bf8a560a693">考勤查询</a>
+            <a href="https://zhibo.xjtu.edu.cn/show">思源直播平台</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://pec.xjtu.edu.cn/index.htm" style="text-decoration:none;color:white;">实践教学中心</a></button>
+          <div class="dropdown-content">
+            <a href="http://pec.xjtu.edu.cn/cxcy/js.htm">竞赛相关</a>
+            <a href="http://pec.xjtu.edu.cn/cxcy/dcxm.htm">大创相关</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://one2020.xjtu.edu.cn/EIP/nonlogin/homePage.htm" style="text-decoration:none;color:white;">师生综合服务大厅</a></button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://www.lib.xjtu.edu.cn/" style="text-decoration:none;color:white;">图书馆</a></button>
+        </div> 
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://class.xjtu.edu.cn/user/index" style="text-decoration:none;color:white;">交大课程回放</a></button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><a href="http://nsa.xjtu.edu.cn/" style="text-decoration:none;color:white;">奖学金</a></button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">其他</button>
+          <div class="dropdown-content">
+            <a href="http://dean.xjtu.edu.cn/xxfw/xl.htm">校历</a>
+            <a href="http://dean.xjtu.edu.cn/xxfw/gxylxfs.htm">各学院联系方式</a>
+            <a href="https://jdcw.xjtu.edu.cn/">财务处</a>
+            <a href="http://nic.xjtu.edu.cn/">网络信息中心</a>
+            <a href="http://job.xjtu.edu.cn/xsfw/sys/emaphome/website/index.html">就业创业信息网</a>
+          </div>
+        </div> 
+      </ul>   
+    </div> 
+    <img src="素材/背景树.png" width="100%" height="100%">
+    <div class="search" id="searchbox" onclick="lk10()">
+        <input id="search" autocomplete="off" type="text" placeholder="Search What I Want" onkeypress="if (event.keyCode == 13) showResult();" onkeydown="entersearch(event)">
+        <!--搜索框 autocomplete="off"设置为off 意为关闭自动填充的下拉选项-->
+      <!--搜索的放大镜图标 暂未设置-->
+        <!-- <img src="icon/搜索，猫客.svg" class="img10" width="35px" height="35px"> -->
+    </div>
+    <script>
+      function jumpPage(searchValue) {
+        window.location.href="http://www.baidu.com/s?ie=UTF-8&wd="+searchValue;
+      }
+      // 按Enter键,执行事件
+      function entersearch(event){
+          if (event.keyCode == 13)
+          {
+              to();
+          }
+      }
+      // 按钮点击触发函数
+      function to(){
+          var searchValue = document.getElementById("search").value;
+  
+          //window.location.href="http://www.baidu.com/s?ie=UTF-8&wd="+searchValue;
+         jumpPage(searchValue);
+         //alert(searchValue);
+      }
+      function lk10(){
+        document.getElementById("search").value="";
+      }
+    </script>
+  </body>
+</html>
