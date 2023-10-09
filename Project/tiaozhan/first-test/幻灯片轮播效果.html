@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>幻灯片轮播</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="images/city.png" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="images/sky.png" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="images/model.png" alt="Slide 3">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var slides = document.querySelectorAll(".slide");
+      var currentSlide = 0;
+
+      function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+
+      setInterval(nextSlide, 3000);
+    });
+
+  </script>
+</body>
+
+</html>

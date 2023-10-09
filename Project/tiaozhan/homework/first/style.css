@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url(image/声之形.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@keyframes HeaderTextAnimation {
+  0% {
+    color: #F56C6C;
+  }
+
+  33% {
+    color: #E6A23C;
+  }
+
+  66% {
+    color: #67C23A;
+  }
+
+  100% {
+    color: #F56C6C;
+  }
+}
+
+Header {
+  width: 100%;
+  background: linear-gradient(to right, rgb(232, 182, 180, 0.2), rgb(166, 202, 164, 0.2));
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  z-index: 1;
+  /* animation: HeaderTextAnimation 3s ease infinite; */
+  animation: maskedAnimation 3s infinite linear;
+  -webkit-animation: maskedAnimation 3s infinite linear;
+  background-image: -webkit-linear-gradient(45deg, #67C23A, #E6A23C, #F56C6C);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  -webkit-background-size: 200% 100%;
+}
+
+@keyframes H1Animation {
+  0% {
+    color: #67C23A;
+  }
+
+  33% {
+    color: #E6A23C;
+  }
+
+  66% {
+    color: #F56C6C;
+  }
+
+  100% {
+    color: #67C23A;
+  }
+}
+
+@keyframes H1ClipAnimation {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes maskedAnimation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+h1 {
+  width: 100%;
+  position: relative;
+  top: 20px;
+  margin: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: 3rem;
+  text-align: center;
+  /* animation: H1Animation 3s ease infinite; */
+  animation: maskedAnimation 3s infinite linear;
+  -webkit-animation: maskedAnimation 3s infinite linear;
+  background-image: -webkit-linear-gradient(45deg, #67C23A, #E6A23C, #F56C6C);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  -webkit-background-size: 200% 100%;
+
+}
+
+.flex-container {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-item {
+  width: 160px;
+  margin: 20px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.box {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 50px;
+  text-align: center;
+  transition: font .3s;
+  font-size: 15px;
+  margin: 10px;
+}
+
+li a {
+  text-decoration: none;
+  line-height: 50px;
+}
+
+li a:link {
+  color: #409EFF;
+}
+
+li a:visited {
+  color: #409EFF;
+}
+
+.box:hover {
+  font-size: 18px;
+  box-shadow: 5px 5px 5px #F56C6C;
+  text-shadow: 5px 5px 3px #67C23A;
+  background: rgb(247, 247, 247, 0.2);
+}
+
+@media screen and (max-width:420px) {
+  body {
+    background-image: url(image/天使.png);
+  }
+
+  main {
+    position: absolute;
+  }
+}

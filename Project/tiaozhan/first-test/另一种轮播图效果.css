@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+header {
+  width: 100vw;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-logo {
+  height: 60px;
+  transition: all .8s ease;
+}
+
+#header-logo:hover {
+  transform: scale(1.5);
+}
+
+#header-center {
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-img {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-img img {
+  margin: 0px 15px;
+  transition: all .3s;
+}
+
+#header-img img:hover {
+  transform: scale(1.5);
+}
+
+.title {
+  font-size: 1rem;
+  color: aliceblue;
+  width: 120px;
+  /*这里必须设置和固定宽度,否则调整界面大小的时候字会被挤到下一行去*/
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.title>a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.title>a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.title[active] a {
+  color: #346c9c;
+}
+
+.dropdown-box {
+  border-radius: 5px;
+  transition: all .8s;
+  /*设置高度为0,溢出隐藏,缓慢增加高度实现溢出部分重现*/
+  height: 0;
+  overflow: hidden;
+  background-color: rgba(239, 71, 93, 0.5);
+}
+
+.title:hover .dropdown-box {
+  height: 160px;
+}
+
+.dropdown-content {
+  color: #12aa9c;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(239, 71, 93, 0.5);
+}
+
+.dropdown-content>a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.dropdown-content:hover {
+  background: linear-gradient(to right, #12aa9c, #346c9c);
+  border-radius: 5px;
+}
+
+.dropdown-content:hover>a {
+  color: black;
+}
+
+.one {
+  width: 100%;
+  height: 800px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 60px;
+}
+
+.img-container{
+  width: 386px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+@keyframes change-img {
+  0%{
+    transform: translateX(-772px);
+  }
+  50%{
+    transform: translateX(-386px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.one-img {
+  width: 1158px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation: change-img 4s linear infinite ;
+}
+
+@keyframes line-animation {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #12aa9c;
+  animation: line-animation 4s linear infinite;
+  transition: all .3s;
+}
+
+
+
+.two {
+  width: 100%;
+  height: 900px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(137, 50, 50));
+  position: relative;
+  top: 60px;
+}
+
+.wrapper {
+  width: 1250px;
+  height: 700px;
+  margin: 0 auto;
+  position: relative;
+  /* background-attachment: fixed; */
+  /* 加上了背景图不随窗口上下滚动而滚动,fixed固定在一个位置 */
+}
+
+.wrapper-bg {
+  width: 1250px;
+  height: 700px;
+  background: url(images/一男一女.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.big-text {
+  width: 2000px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 10em;
+  font-family: "字魂196号-大明宋";
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
+
+
+.search-box {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 100px;
+  background: transparent;
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+
+.search-box:hover {
+  width: 550px;
+  border: 2px solid #12aa9c;
+}
+
+input::placeholder {
+  color: white;
+  text-align: left;
+}
+
+.input-box {
+  position: relative;
+  left: 20px;
+  width: 425px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: 0;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.search-icon-div {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.search-icon-div:hover {
+  cursor: pointer;
+}
+
+.search-icon {
+  margin: 10px 10px;
+}
+
+.two-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.two-item {
+  margin: 0 50px;
+  font-size: 2em;
+  font-family: "字魂196号大明宋";
+}
+
+.three {
+  width: 100%;
+  height: 900px;
+  background-color: #346c9c;
+}

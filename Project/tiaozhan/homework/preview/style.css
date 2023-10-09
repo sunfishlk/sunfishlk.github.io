@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(129, 196, 238);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.card{
+    width: 300px;
+    height: 360px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    /* left: 50%;
+    top: 50%;
+    margin-top: -180px;
+    margin-left: -150px; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5%;
+}
+img{
+    margin-top:30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+a:link{
+    color: aqua;
+    text-decoration: none;
+}
+a:visited{
+    color:aqua;
+}
+a:hover{
+    color: #8abcd1;
+}

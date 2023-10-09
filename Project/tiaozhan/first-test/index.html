@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一考</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font.css">
+</head>
+
+<body onscroll="setBackIconStyle();scaleBigText()">
+  <div id="anchor"></div>
+  <header>
+    <div id="header-logo">
+      <a href="https://www.tiaozhan.com"><img src="images/logo.png" height="60px"></a>
+    </div>
+    <div id="header-center">
+      <div class="title" active><a href="https://sunfishlk.github.io/Project/XjtuPage">首页</a></div>
+      <div class="title">全部商品
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+      <div class="title">活动特惠
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+      <div class="title">设计服务
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+      <div class="title">家居灵感
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+      <div class="title">新品一览
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+      <div class="title">售后服务
+        <div class="dropdown-box">
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+          <div class="dropdown-content">
+            <a href="">我的商品</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="header-img">
+      <a href=""><img src="icon/upload-cloud.svg" height="30px" alt="上传云"></a>
+      <a href=""><img src="icon/bell.svg" height="30px" alt="铃铛"></a>
+      <a href=""><img src="icon/login.svg" height="30px" alt="登录"></a>
+    </div>
+  </header>
+  <section class="one">
+    <div class="slide-container">
+      <div class="slide1 active">
+        <img src="images/city.png" alt="城市" height="600px">
+      </div>
+      <div class="slide1">
+        <img src="images/model.png" alt="模特" height="600px">
+      </div>
+      <div class="slide1">
+        <img src="images/sky.png" alt="天空" height="600px">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="slide-container">
+      <div class="slide2 active">
+        <img src="images/sky.png" alt="天空" height="600px">
+      </div>
+      <div class="slide2">
+        <img src="images/city.png" alt="城市" height="600px">
+      </div>
+      <div class="slide2">
+        <img src="images/model.png" alt="模特" height="600px">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="slide-container">
+      <div class="slide3 active">
+        <img src="images/model.png" alt="模特" height="600px">
+      </div>
+      <div class="slide3">
+        <img src="images/sky.png" alt="天空" height="600px">
+      </div>
+      <div class="slide3">
+        <img src="images/city.png" alt="城市" height="600px">
+      </div>
+      <div class="line"></div>
+    </div>
+  </section>
+  <section class="two">
+    <div class="wrapper">
+      <div class="wrapper-bg">
+        <div class="big-text">JUST GO ON</div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="挑战,无处不在" class="input-box" onfocus="blurBackground()" onblur="clearBackground()"
+          onkeydown="keyEnterSearch()">
+        <div class="search-icon-div" onclick="search()">
+          <a><img src="icon/search.svg" height="30px" class="search-icon"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="item-line">
+    <div class="item-container">
+      <div class="item">前来挑战</div>
+      <div class="item">前来挑战</div>
+      <div class="item">前来挑战</div>
+      <div class="item">前来挑战</div>
+      <div class="item">前来挑战</div>
+    </div>
+  </div>
+  <section class="three">
+    <div class="three-img-container">
+      <img src="images/cars.png" alt="车辆" width="250px" id="three-img1" class="three-img" onmouseover="setZIndex1()">
+      <img src="images/lamp.png" alt="路灯" width="500px" id="three-img2" class="three-img" onmouseover="setZIndex2()">
+      <img src="images/big-watch.png" alt="手表" width="400px" id="three-img3" class="three-img"
+        onmouseover="setZIndex3()">
+      <img src="images/barbecue.png" alt="烤肉" width="300px" id="three-img4" class="three-img"
+        onmouseover="setZIndex4()">
+      <img src="images/computer.png" alt="电脑" width="400px" id="three-img5" class="three-img"
+        onmouseover="setZIndex5()">
+    </div>
+  </section>
+  <section class="four">
+    <div class="four-img-container">
+      <img src="images/man-head.png" alt="人头像" height="800px" class="four-img-margin">
+      <div>
+        <img src="images/new-car.png" alt="豪车" height="330px" width="590px" class="four-img-margin">
+        <div class="four-flex">
+          <img src="images/long-lamp.png" alt="长路灯" height="450px" class="four-img-margin">
+          <div>
+            <img src="images/shoes.png" alt="鞋子" height="214px" width="272px" class="four-img-margin">
+            <img src="images/little-watch.png" alt="小手表" height="214px" class="four-img-margin">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="five">
+    <video src="video/【指弹吉他】emo版《counter attack》.mp4" width="600px" controls></video>
+    <div class="five-text">
+      <div class="logo">BEYOND</div>
+      <div class="print-text"></div>
+      <div class="logo">ME</div>
+    </div>
+  </section>
+  <div class="separated-line"></div>
+  <footer>
+    <div class="footer-flex">
+      <h1 class="footer-big-text">挑战网</h1>
+      <p class="footer-small-text">技术部 | 美工部 | 视频部 | 新媒体部 | 来挑战兴风作浪就是说</p>
+      <div class="footer-icon-container">
+        <img src="icon/Libra.png" alt="天平座" width="30px" class="footer-icon">
+        <img src="icon/Sagittarius.png" alt="射手座" width="30px" class="footer-icon">
+        <img src="icon/Cancer.png" alt="巨蟹座" width="30px" class="footer-icon">
+        <img src="icon/Aries.png" alt="白羊座" width="30px" class="footer-icon">
+        <img src="icon/Pisces.png" alt="双鱼座" width="30px" class="footer-icon">
+      </div>
+    </div>
+  </footer>
+  <a href="#anchor"><img src="icon/back-to-top.svg" width="50px" class="back-to-top"></a>
+  <a href="music.html" style="color: white;">音频</a>
+  <audio src="audio/01_Theme.mp3" class="audio" controls autoplay loop>您的浏览器不支持此音频播放</audio>
+  <script src="index.js"></script>
+</body>
+
+</html>

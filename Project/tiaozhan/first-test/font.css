@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "字魂196号大明宋";
+  src: url(font/song.ttf);
+}
+
+@font-face {
+  font-family: "Lucida Console";
+  src: url(font/lucon.ttf);
+}
+
+@font-face {
+  font-family: "EditorialGrotesk";
+  src: url(font/EditorialGroteskBold.otf);
+}
+
+@font-face {
+  font-family:"Adobe黑体" ;
+  src: url(font/AdobeHeitiStd-Regular.otf);
+}
