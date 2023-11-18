@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header, footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        main {
+            height: 400px; /* 设置 main 的高度为 400 像素 */
+            display: flex;
+        }
+
+        aside {
+            width: 20%;
+            background-color: #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Website</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Your sidebar content goes here.</p>
+        </aside>
+
+        <section>
+            <h1>Main Content</h1>
+            <p>Your main content goes here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Footer content goes here.</p>
+    </footer>
+</body>
+</html>

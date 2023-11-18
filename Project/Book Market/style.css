@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  /*如果body设置height:100vh则网页肯定不是纵向布局，而是偏响应式布局的单页面形式*/
+  background-color: #eceaeb;
+  overflow-x: hidden;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+/*网页滚动条 整个*/
+::-webkit-scrollbar {
+  /* 可以设置宽度，但是设置高度无效，由浏览器自行决定 */
+  width: 10px;
+}
+
+/*网页滚动条 轨道*/
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/*网页滚动条 滑块*/
+::-webkit-scrollbar-thumb {
+  background-color: #98cce8;
+  border-radius: 10px;
+}
+
+/* ::-webkit-scrollbar-thumb:hover{
+  background-color: #8abcd1;
+} */
+aside {
+  width: 250px;
+  height: 100vh;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+}
+
+main {
+  flex: 1;
+  /* height: 2000px; */
+  /* min-width: 800px; */
+  background-color: #eceaeb;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.aside-top {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  margin: 0 15px;
+  transition: all .3s;
+}
+
+.menu-button:hover {
+  background-color: #d5ea79;
+  transform: scale(1.2);
+}
+
+.menu-button-img {
+  cursor: pointer;
+}
+
+.logo-container {
+  margin: 0 15px;
+  transition: all .3s;
+}
+
+.logo-container:hover {
+  transform: scale(1.3);
+}
+
+.aside-center {
+  width: 250px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 0 auto; */
+}
+
+.item {
+  width: 200px;
+  height: 50px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+  border-radius: 12px;
+}
+
+.item:hover {
+  background-color: #d5ea79;
+}
+
+.item-active {
+  border: 1px solid #e1e1e1;
+  background-color: #ebebeb;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.item-icon {
+  margin: 0 10px;
+  height: 30px;
+}
+
+.item-title {
+  margin: 0 30px;
+  font-size: 1rem;
+}
+
+.item-title-more {
+  position: relative;
+  left: 8px;
+}
+
+.button {
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: #d5ea79;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.button:hover {
+  background-color: #4eb772;
+  color: white;
+}
+
+.aside-bottom {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  margin: 0 5px;
+  margin-right: 10px;
+  transition: all .3s;
+}
+
+.avatar:hover {
+  transform: scale(1.2) rotate(30deg);
+}
+
+.message {
+  position: relative;
+  top: -3px;
+  text-align: left;
+}
+
+.nickname {
+  font-size: 1rem;
+  margin: 2px 0;
+}
+
+.mail {
+  font-size: 0.8rem;
+  color: #cdd2d8;
+  /* color: #d5ea79; */
+}
+
+.more {
+  margin-left: 10px;
+  transition: all .3s;
+  border-radius: 6px;
+  height: 30px;
+}
+
+.more:hover {
+  background-color: #d5ea79;
+}
+
+.aside-control {
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-button {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  background-color: white;
+  transition: all .3s;
+}
+
+.aside-button:hover {
+  background-color: black;
+}
+
+.aside-icon-img {
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.main-top {
+  width: 1200px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid white;
+  border-radius: 10px; */
+}
+
+.menubar {
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menubar-item {
+  font-size: 1.4rem;
+  margin: 0 100px;
+  cursor: pointer;
+  transition: all .1s;
+  font-family: "华文楷体";
+}
+
+.menubar-item:hover {
+  color: #1ba784;
+}
+
+.menubar-item-active {
+  font-weight: bold;
+}
+
+.menubar-item-active::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  width: 50px;
+  height: 4px;
+  background-color: #d5ea79;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 560px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid #98cce8;
+  border-radius: 20px;
+  margin: 30px 0;
+  transition: all .3s;
+}
+
+.search-box:hover {
+  width: 620px;
+}
+
+.search-input {
+  width: 460px;
+  height: 40px;
+  position: relative;
+  left: 20px;
+}
+
+input {
+  outline: 0;
+  border: 0;
+  font-size: 0.9rem;
+  /* text-align: center; */
+}
+
+input::placeholder{
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slide-container {
+  width: 1200px;
+  height: 228px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-box {
+  width: 1200px;
+  margin-top: 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.comment-head {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.comment-content {
+  width: 1100px;
+  padding: 10px 0;
+  text-align: left;
+  position: relative;
+  left: 65px;
+  top: 10px;
+  line-height: 2;
+}
+
+.comment-control {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 10px 0;
+}
+
+.comment-item {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.comment-item:hover {
+  background-color: #e8e9ea;
+}
+
+.comment-icon {
+  margin-right: 8px;
+}
+
+/* .comment-icon:hover{
+  background-color: #1ba784;
+} */
+.comment-icon-text {
+  color: black;
+  cursor: pointer;
+}
+
+/* .comment-icon-text:hover{
+  background-color: #1ba784;
+}  */

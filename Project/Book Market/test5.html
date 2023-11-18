@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepL API 调用示例</title>
+</head>
+
+<body>
+
+  <textarea id="sourceText" rows="4" cols="50">Hello, how are you?</textarea>
+  <button onclick="translateText()">Translate</button>
+
+  <div id="translatedText"></div>
+
+  <script>
+    async function translateText() {
+      const sourceText = document.getElementById('sourceText').value;
+
+      try {
+        const response = await fetch('https://api-free.deepl.com/v2/translate', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `text=${encodeURIComponent(sourceText)}&target_lang=EN-US`,
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
+        const translatedText = result.translations[0].text;
+
+        document.getElementById('translatedText').innerText = translatedText;
+      } catch (error) {
+        console.error('Error:', error);
+        console.error('Response:', response);
+      }
+    }
+  </script>
+
+</body>
+
+</html>

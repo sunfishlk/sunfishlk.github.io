@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>布克书集 | 二手书交易</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../icons/logo-cut.png">
+  <link rel="stylesheet" type="text/css" href="../css/used-books.css">
+</head>
+<body onscroll="setMenubar();setBackToTop()">
+  <div id="anchor"></div>
+  <aside id="aside">
+    <div class="aside-top">
+      <div class="menu-button">
+        <img src="../icons/hamburger.png" width="30px" alt="hamburger-button" onclick="hideSide()" class="menu-button-img">
+      </div>
+      <div class="logo-container">
+        <a href="#"><img src="../icons/logo.png" width="60px" alt="logo"></a>
+      </div>
+    </div>
+    <div class="aside-center">
+      <div class="item" onclick="loadHomePage()">
+        <div class="item-icon">
+          <img src="../icons/home1.png" alt="home" width="30px">
+        </div>
+        <div class="item-title">首页</div>
+      </div>
+      <div class="item" onclick="loadSquare()">
+        <div class="item-icon">
+          <img src="../icons/city.png" alt="city" width="30px">
+        </div>
+        <div class="item-title">广场</div>
+      </div>
+      <div class="item" onclick="loadVideo()">
+        <div class="item-icon">
+          <img src="../icons/video.png" alt="video" width="30px">
+        </div>
+        <div class="item-title">视频</div>
+      </div>
+      <div class="item item-character-more item-active" onclick="loadUsedBooks()">
+        <div class="item-icon">
+          <img src="../icons/book1.png" alt="book" width="30px">
+        </div>
+        <div class="item-title item-title-more">二手书</div>
+      </div>
+      <div class="item" onclick="loadMessage()">
+        <div class="item-icon">
+          <img src="../icons/comment.png" alt="comment" width="30px">
+        </div>
+        <div class="item-title">消息</div>
+      </div>
+      <div class="item" onclick="loadPersonalPage()">
+        <div class="item-icon">
+          <img src="../icons/user.png" alt="user" width="30px">
+        </div>
+        <div class="item-title">主页</div>
+      </div>
+      <div class="button" onclick="publish()">发布</div>
+    </div>
+    <div class="aside-bottom">
+      <div class="avatar">
+        <a href="#"><img src="../images/圆角-七宫智音.png" width="45px" alt="七宫智音"></a>
+      </div>
+      <div class="message">
+        <div class="nickname">七宫智音</div>
+        <div class="mail">705074614@qq.com</div>
+      </div>
+      <div class="more">
+        <a href="#"><img src="../icons/more.png" width="30px" alt="more"></a>
+      </div>
+    </div>
+  </aside>
+  <div class="aside-control">
+    <div class="aside-button">
+      <img src="../icons/右箭头.png" width="45px" alt="hamburger" onclick="showSide()" class="aside-icon-img">
+    </div>
+  </div>
+  <main>
+    <div class="main-top">
+      <div class="main-top-top">
+        <div class="search-box">
+          <div class="scan" onclick="scan()">
+            <img src="../icons/扫描.png" width="30px" alt="scan">
+          </div>
+          <div class="line"></div>
+          <input type="text" placeholder="搜索书名、作者、分类、ISBN" class="search-input" id="search-input">
+          <div class="search" onclick="search()">
+            <img src="../icons/search.png" width="120px" alt="search">
+          </div>
+        </div>
+        <div class="classify" onclick="classify()">
+          <img src="../icons/all.png" width="30px" alt="classify">
+        </div>
+      </div>
+      <div class="hot-search-text">热门搜索</div>
+      <div class="commend-detail">
+        <div class="commend-detail-item">鲁迅</div>
+        <div class="commend-detail-item">围城</div>
+        <div class="commend-detail-item">村上春树</div>
+        <div class="commend-detail-item">川端康成</div>
+        <div class="commend-detail-item">余华</div>
+      </div>
+      <div class="commend-detail">
+        <div class="commend-detail-item">雪国</div>
+        <div class="commend-detail-item">傲慢与偏见</div>
+        <div class="commend-detail-item">活着</div>
+        <div class="commend-detail-item">夏目漱石</div>
+        <div class="commend-detail-item">百年孤独</div>
+      </div>
+    </div>
+    <div class="menubar">
+      <div class="menubar-item menubar-item-active" onclick="switchToRecommend()" onmouseover="mouseOver(0)" onmouseout="mouseOut(0)">推荐</div>
+      <div class="menubar-item" onclick="switchToHotRank()" onmouseover="mouseOver(1)" onmouseout="mouseOut(1)">热榜</div>
+      <div class="menubar-item" onclick="switchToFollow()" onmouseover="mouseOver(2)" onmouseout="mouseOut(2)">关注</div>
+    </div>
+    <div class="main-bottom">
+      <div class="book-container">
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="April" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/violet.png" alt="violet" width="180px" height="250px">
+          </div>
+          <div class="book-name">紫罗兰永恒花园</div>
+          <div class="book-class"># 爱情</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 69.99</div>
+            <div class="book-discount">6折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/EMT.jpg" alt="EMT" width="180px" height="250px">
+          </div>
+          <div class="book-name">从零开始的异世界生活</div>
+          <div class="book-class"># 异世界</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 39.99</div>
+            <div class="book-discount">8折</div>
+          </div>
+        </div>
+      </div>
+      <div class="book-container">
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+      </div>
+      <div class="book-container">
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+      </div>
+      <div class="book-container">
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+        <div class="book">
+          <div class="book-face">
+            <img src="../images/April.png" alt="" width="180px" height="250px">
+          </div>
+          <div class="book-name">四月是你的谎言</div>
+          <div class="book-class"># 治愈</div>
+          <div class="book-price-container">
+            <div class="book-price">￥ 99.99</div>
+            <div class="book-discount">9折</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="back-to-top">
+    <a href="#anchor"><img src="../icons/回顶部.png" alt="回顶部" width="50px"></a>
+  </div>
+  <script src="../js/used-books.js"></script>
+</body>
+</html>

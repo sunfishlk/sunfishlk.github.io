@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>布克书集</title>
+  <link rel="shortcut icon" type="image/x-icon" href="icons/logo-cut.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <aside id="aside">
+    <div class="aside-top">
+      <div class="menu-button">
+        <img src="icons/hamburger.png" width="30px" alt="hamburger-button" onclick="hideSide()" class="menu-button-img">
+      </div>
+      <div class="logo-container">
+        <a href="#"><img src="icons/logo.png" width="60px" alt="logo"></a>
+      </div>
+    </div>
+    <div class="aside-center">
+      <div class="item item-active" onclick="loadHomePage()">
+        <div class="item-icon">
+          <img src="icons/home.png" alt="home" width="30px">
+        </div>
+        <div class="item-title">首页</div>
+      </div>
+      <div class="item" onclick="loadSquare()">
+        <div class="item-icon">
+          <img src="icons/city.png" alt="city" width="30px">
+        </div>
+        <div class="item-title">广场</div>
+      </div>
+      <div class="item" onclick="loadVideo()">
+        <div class="item-icon">
+          <img src="icons/video.png" alt="video" width="30px">
+        </div>
+        <div class="item-title">视频</div>
+      </div>
+      <div class="item" onclick="loadUsedBooks()">
+        <div class="item-icon">
+          <img src="icons/book.png" alt="book" width="30px">
+        </div>
+        <div class="item-title item-title-more">二手书</div>
+      </div>
+      <div class="item" onclick="loadMessage()">
+        <div class="item-icon">
+          <img src="icons/comment.png" alt="comment" width="30px">
+        </div>
+        <div class="item-title">消息</div>
+      </div>
+      <div class="item" onclick="loadPersonalPage()">
+        <div class="item-icon">
+          <img src="icons/user.png" alt="user" width="30px">
+        </div>
+        <div class="item-title">主页</div>
+      </div>
+      <div class="button" onclick="publish()">发布</div>
+    </div>
+    <div class="aside-bottom">
+      <div class="avatar">
+        <a href="#"><img src="images/圆角-七宫智音.png" width="45px" alt="七宫智音"></a>
+      </div>
+      <div class="message">
+        <div class="nickname">七宫智音</div>
+        <div class="mail">705074614@qq.com</div>
+      </div>
+      <div class="more">
+        <a href="#"><img src="icons/more.png" width="30px" alt="more"></a>
+      </div>
+    </div>
+  </aside>
+  <div class="aside-control">
+    <div class="aside-button">
+      <img src="icons/右箭头.png" width="45px" alt="hamburger" onclick="showSide()" class="aside-icon-img">
+    </div>
+  </div>
+  <main>
+    <div class="main-top">
+      <div class="menubar">
+        <div class="menubar-item menubar-item-active" onclick="switchToRecommend()">推荐</div>
+        <div class="menubar-item" onclick="switchToHotRank()">热榜</div>
+        <div class="menubar-item" onclick="switchToFollow()">关注</div>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search what you want" class="search-input" id="search-input">
+        <div class="search" onclick="search()">
+          <img src="icons/search.png" width="120px" alt="search">
+        </div>
+      </div>
+      <div class="slide-container">
+        <img src="images/城市.jpg" alt="slide-bg" height="228px" width="1200px">
+      </div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-head">
+        <div class="avatar">
+          <a href="#"><img src="images/圆角-sugar.png" width="45px" alt="松阪砂糖"></a>
+        </div>
+        <div class="message">
+          <div class="nickname">松坂砂糖</div>
+          <div class="mail">7702396760@qq.com</div>
+        </div>
+      </div>
+      <div class="comment-content">
+        本人女，一直母胎solo，最近越来越希望有一个异性能和我一起交流，分享生活，最好可以发展一段感情。
+
+        现实生活中是个阳光开朗的人，身材匀称，有不少兴趣爱好，喜欢摄影、骑行（这两个投入时间都比较多，算是比较进阶的爱好）、跑步（能一起运动是最好的啦）、无人机等等，对西安本地各种好吃好玩的都比较熟悉，可以带你吃好吃的，还会拍好看的照片，
+
+        交际圈里一直很少有男生存在，所以事实上可能不太会跟女孩子聊天，但其实是一个熟了之后分享欲很强，会包容，体贴的人…
+
+        希望有男生能看到，一起先从做个朋友开始。
+
+        qq先留个小号捏 213799480。
+      </div>
+      <div class="comment-control">
+        <div class="comment-item" onclick="comment()">
+          <img src="icons/comment-black.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">评论</div>
+        </div>
+        <div class="comment-item" onclick="share()">
+          <img src="icons/share.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">分享</div>
+        </div>
+        <div class="comment-item" onclick="like()">
+          <img src="icons/like.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">喜欢</div>
+        </div>
+        <div class="comment-item" onclick="star()">
+          <img src="icons/star.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">收藏</div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-head">
+        <div class="avatar">
+          <a href="#"><img src="images/圆角-稻禾恋.png" width="45px" alt="稻禾恋"></a>
+        </div>
+        <div class="message">
+          <div class="nickname">稻禾恋之歌</div>
+          <div class="mail">8499049870@qq.com</div>
+        </div>
+      </div>
+      <div class="comment-content">
+        你搞错了，恋爱不一定甜，事实上它意味着两个人的绑定，意味着责任和负担，更不用说当这种关系破裂时的痛苦。
+        当你要为破裂的痛苦做准备的时候，又怎么能将全部的爱投注到对象身上。
+        你说的需求并不是非异性不可，并且异性并不一定有优势。例如“不太会跟女孩子聊天”这件事，既然现代社会强调男女平等，那何谓擅长和异性聊天一说，只有和人聊天擅长与否。
+        当然，纯属一点个人见解，你可以把所有的你替换成我。
+      </div>
+      <div class="comment-control">
+        <div class="comment-item" onclick="comment()">
+          <img src="icons/comment-black.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">评论</div>
+        </div>
+        <div class="comment-item" onclick="share()">
+          <img src="icons/share.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">分享</div>
+        </div>
+        <div class="comment-item" onclick="like()">
+          <img src="icons/like.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">喜欢</div>
+        </div>
+        <div class="comment-item" onclick="star()">
+          <img src="icons/star.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">收藏</div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-head">
+        <div class="avatar">
+          <a href="#"><img src="images/圆角-琉夏.png" width="45px" alt="琉夏"></a>
+        </div>
+        <div class="message">
+          <div class="nickname">追逐太阳的鱼</div>
+          <div class="mail">2577095260@qq.com</div>
+        </div>
+      </div>
+      <div class="comment-content">
+        支持交友捏。
+        不过不知道楼主在没在表白墙发，这里显然不是一个人流量大女生够多的地方，
+        而且恋爱也不必只跟异性谈，这份情感需求在我看来完全可以通过同性或者其他动植物来满足，
+        帮顶，祝楼主加到喜欢的女生。
+      </div>
+      <div class="comment-control">
+        <div class="comment-item" onclick="comment()">
+          <img src="icons/comment-black.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">评论</div>
+        </div>
+        <div class="comment-item" onclick="share()">
+          <img src="icons/share.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">分享</div>
+        </div>
+        <div class="comment-item" onclick="like()">
+          <img src="icons/like.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">喜欢</div>
+        </div>
+        <div class="comment-item" onclick="star()">
+          <img src="icons/star.png" alt="more" class="comment-icon" width="24px">
+          <div class="comment-icon-text">收藏</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

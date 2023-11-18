@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自定义滚动条</title>
+  <style>
+    /* Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 12px;
+      /* 宽度 */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      /* 滚动槽的背景色 */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      /* 滚动条的颜色 */
+      height: 150px;
+      /* 滚动条的高度 */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+      /* 滑过时滚动条的颜色 */
+    }
+
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 2000px;
+      /* 为了产生滚动条 */
+    }
+
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <p>这里是网页内容</p>
+  </div>
+
+</body>
+
+</html>
