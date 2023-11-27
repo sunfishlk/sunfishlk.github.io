@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+  <div class="card">
+    <img src="../images/全长logo.jpg" height="120px" class="logo-img">
+    <div class="phone-number-input-container">
+      <input type="text" placeholder="请输入手机号" class="phone-number-input">
+    </div>
+    <div class="mail-input-container">
+      <input type="text" placeholder="请输入邮箱" class="mail-input">
+    </div>
+    <div class="verify-code">
+      <div class="verify-input-container">
+        <input type="text" placeholder="短信验证码" class="verify-code-container">
+      </div>
+      <div class="get-verify-code-button" onclick="getVerifyCode()">获取验证码</div>
+    </div>
+    <div class="mail-password-container">
+      <input type="password" class="mail-password-input" placeholder="请输入密码">
+    </div>
+    <div class="login-button" onclick="login()">登录/注册</div>
+    <p class="forget-password"><a href="../html/forget-password.html">忘记密码？</a></p>
+    <div class="back-home"><a href="../index.html">返回首页</a></div>
+    <p class="login-p">其他登录方式</p>
+    <div class="other-login">
+      <div class="password-login" onclick="changeToPasswordLogin()">
+        密码登录
+      </div>
+      <div class="phone-number-login" onclick="changeToFreePasswordLogin()">
+        免密登录
+      </div>
+      <div class="login-icon" onclick="changeToMailLogin()">
+        <img src="../icons/邮箱.png" alt="邮箱" height="30px">
+      </div>
+      <div class="login-icon" onclick="changeToQQLogin()">
+        <img src="../icons/QQ.png" alt="qq" height="30px">
+      </div>
+      <div class="login-icon" onclick="changeToWeChatLogin()">
+        <img src="../icons/微信-绿.png" alt="微信" height="27px">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

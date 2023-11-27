@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>膳食科普</title>
+  <link rel="stylesheet" type="text/css" href="../css/science-popularizing.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../images/圆角-logo.png">
+  <!-- <script type="text/javascript" src="https://unpkg.com/scrollreveal"></script> -->
+</head>
+<body onscroll="setBackIconStyle()">
+  <div id="anchor"></div>
+  <header>
+    <a href="https://www.yuque.com"><img src="../images/全长logo.jpg" height="50px" class="header-logo"></a>
+    <div class="header-center">
+      <div class="item"><a href="../index.html">首页</a></div>
+      <div class="item"><a href="database.html">膳食数据库</a></div>
+      <div class="item"><a href="illness-catch.html">食源性疾病监测</a></div>
+      <div class="item"><a href="questionnaire.html">膳食问卷</a></div>
+      <div class="item"><a href="consult.html">营养师咨询</a></div>
+      <div class="item"><a href="science-polularizing.html">膳食科普</a></div>
+      <div class="item"><a href="diet-record.html">日常饮食记录</a></div>
+    </div>
+    <div class="header-right">
+      <div class="header-button"><a href="login.html">登录/注册</a></div>
+    </div>
+  </header>
+  <div class="bg-container">
+    <h1 class="bg-h1">饮食健康，快人一步</h1>
+    <p class="bg-p">您的营养搭配最优解</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search what you want" class="search-input" id="search-input" onfocus="blurBackground()" onblur="clearBackground()">
+      <div class="search" onclick="search()">
+        <img src="../icons/search.png" width="120px" alt="search">
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">日常营养专区</div>
+      <div class="card-img">
+        <img src="../images/科普2.jpg" alt="1" width="300px" height="300px">
+      </div>
+      <div class="card-detail-container">
+        <div class="card-detail">减肥、增肌、平衡营养、低热量饮食、低糖饮食</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">特殊人群营养专区</div>
+      <div class="card-img">
+        <img src="../images/科普3.jpg" alt="2" width="300px" height="300px">
+      </div>
+      <div class="card-detail-container">
+        <div class="card-detail">宝宝辅食、孕期哺乳期饮食、老年人饮食</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">慢性病营养专区</div>
+      <div class="card-img">
+        <img src="../images/科普4.jpg" alt="3" width="300px" height="300px">
+      </div>
+      <div class="card-detail-container">
+        <div class="card-detail">高血压、糖尿病、心血管疾病预防与控制</div>
+      </div>
+    </div>
+  </div>
+  <!-- <main>
+    <article>
+      <div id="article1">article1</div>
+      <div id="article2">article2</div>
+    </article>
+    <aside>
+      <div class="aside-title">What's New</div>
+      <div class="aside-content">Updated Data
+        Documentation for the following datasets were updated to reflect the correct units 
+        of the reported analyte values for thyroid stimulating hormone (LBXTSH) as “µIU/mL”. 
+        No changes were made to the actual data points of any analytes in these datasets.</div>
+    </aside>
+  </main> -->
+  <footer>
+    <div class="left">
+      <div class="footer-big-text">善禾科技</div>
+      <div class="footer-small-text">智慧膳食引领者</div>
+      <div class="footer-icon-container">
+        <a href="" class="footer-icon"><img src="../icons/微信.png" alt="微信" height="40px" width="40px" ></a>
+        <a href="" class="footer-icon"><img src="../icons/b站.png" alt="b站" height="30px" width="30px"></a>
+        <a href="" class="footer-icon"><img src="../icons/知乎.png" alt="知乎" height="40px" width="40px"></a>
+        <a href="" class="footer-icon"><img src="../icons/新浪微博.png" alt="微博" height="30px" width="30px"></a>
+        <a href="" class="footer-icon"><img src="../icons/GitHub.png" alt="GitHub" height="35px" width="35px"></a>
+      </div>
+      <div class="QRcode-container">
+        <div class="QRcode">
+          <img src="../images/微信.jpg" height="100px">
+        </div>
+        <div class="QRcode-text">
+          <div class="QRcode-text-up">微信扫码加入社群</div>
+          <div class="QRcode-text-down">加入善禾社群，获得更多信息，结交禾友</div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="list">
+        <div class="list-title">产品相关</div>
+        <div class="list-content">
+          <div class="list-content-item"><a href="">核心能力</a></div>
+          <div class="list-content-item"><a href="">产品咨询</a></div>
+          <div class="list-content-item"><a href="">团队使用</a></div>
+          <div class="list-content-item"><a href="">客户案例</a></div>
+          <div class="list-content-item"><a href="">定价</a></div>
+        </div>
+      </div>
+      <div class="list">
+        <div class="list-title">服务支持</div>
+        <div class="list-content">
+          <div class="list-content-item"><a href="">帮助中心</a></div>
+          <div class="list-content-item"><a href="">数据安全</a></div>
+          <div class="list-content-item"><a href="">服务协议</a></div>
+          <div class="list-content-item"><a href="">开发者</a></div>
+          <div class="list-content-item"><a href="">反馈</a></div>
+        </div>
+      </div>
+      <div class="list">
+        <div class="list-title">关于</div>
+        <div class="list-content">
+          <div class="list-content-item"><a href="">关于善禾</a></div>
+          <div class="list-content-item"><a href="">善禾专栏</a></div>
+          <div class="list-content-item"><a href="">媒体报道</a></div>
+          <div class="list-content-item"><a href="">联系我们</a></div>
+          <div class="list-content-item"><a href="">加入我们</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="back-to-top">
+    <a href="#anchor"><img src="../icons/返回顶部.png" alt="返回顶部" width="50px" height="50px"></a>
+  </div>
+  <script type="text/javascript" src="../js/science-popularizing.js"></script>
+  <!-- <script type="text/javascript" src="../js/scroll-reveal.js"></script> -->
+</body>
+</html>
