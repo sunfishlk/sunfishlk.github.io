@@ -5,4 +5,4 @@
 #### [交大首页](https://sunfishlk.github.io/Project/XjtuPage)
 #### [布克集市](https://sunfishlk.github.io/Project/BookMarket) 
 #### [善禾科技](https://sunfishlk.github.io/Project/ShanHeTechnology)
-#### [个人博客](https://sunfishlk.github.io/blogs)
+
